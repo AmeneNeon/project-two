@@ -10,7 +10,7 @@ function BookDetail() {
   const [inputs, setInputs] = useState();
   const id = useParams().id;
   const [checked, setChecked] = useState(false);
-  const history =useNavigate()
+  const history = useNavigate();
 
   useEffect(() => {
     const fetchHandler = async () => {
@@ -23,18 +23,20 @@ function BookDetail() {
   }, [id]);
 
   const sendRequest = async () => {
-    await axios.put(`http://localhost:5000/books/${id}`, {
-      name: String(inputs.name),
-      author: String(inputs.author),
-      description: String(inputs.description),
-      price: Number(inputs.price),
-      image: String(inputs.image),
-      available: Boolean(checked),
-    }).then(res=>res.data)
+    await axios
+      .put(`http://localhost:5000/books/${id}`, {
+        name: String(inputs.name),
+        author: String(inputs.author),
+        description: String(inputs.description),
+        price: Number(inputs.price),
+        image: String(inputs.image),
+        available: Boolean(checked),
+      })
+      .then((res) => res.data);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendRequest().then(()=>history("/books"))
+    sendRequest().then(() => history("/books"));
   };
   const handleChange = (e) => {
     setInputs((prevState) => ({

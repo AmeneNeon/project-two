@@ -4,13 +4,15 @@ ul {
   justify-content: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
+
 }
 li {
   padding: 10px;
   width: 250px;
   max-width: 250px;
   max-height: 400px;
-  list-style-type: none
+  list-style-type: none;
+
 }
 .card {
   margin: auto;
@@ -107,6 +109,9 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 20px;
   width: 400px;
+  background-color: rgb(237, 81, 19);
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(187, 189, 190);
 }
 
 .form-group {
@@ -168,7 +173,7 @@ ul {
 }
 
 li {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -190,4 +195,22 @@ img {
 p {
   max-width: 400px;
   font-size: 12px;
+}
+button {
+  background-color: #2e27f2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 60px;
+}
+button:hover {
+  background-color: rgb(11, 249, 245);
+  color: black;
 }
